@@ -509,3 +509,182 @@ INSERT INTO [dbo].[KhachHang]
            ,@DIACHI)
 END
 GO
+
+create proc NPP_DELETE
+@MANPP int
+as
+begin
+DELETE FROM [dbo].[NhaPhanPhoi]
+      WHERE MANPP=@MANPP
+end
+
+
+CREATE PROC NPP_UPDATE
+(
+@MANPP INT,
+@TENNPP NVARCHAR(500),
+@DIACHI NVARCHAR(500),
+@DIENTHOAI NVARCHAR(50),
+@FAX NVARCHAR(50),
+@EMAIL NVARCHAR(500)
+)
+AS
+BEGIN
+UPDATE [dbo].[NhaPhanPhoi]
+   SET [TENNPP] = @TENNPP
+      ,[DIACHI] = @DIACHI
+      ,[DIENTHOAI] = @DIENTHOAI
+      ,[FAX] = @FAX
+      ,[EMAIL] = @EMAIL
+ WHERE MANPP=@MANPP
+END
+
+CREATE PROC NXB_INSERT
+(
+  @TENNXB nvarchar(500),
+  @DIACHI nvarchar(500),
+  @DIENTHOAI nvarchar(50),
+  @EMAIL nvarchar(500)
+)
+AS
+BEGIN
+INSERT INTO [dbo].[NhaXuatBan]
+           ([TENNXB]
+           ,[DIACHI]
+           ,[DIENTHOAI]
+           ,[EMAIL])
+     VALUES
+           (@TENNXB
+           ,@DIACHI
+           ,@DIENTHOAI
+           ,@EMAIL)
+END
+
+
+CREATE PROC NXB_UPDATE
+(@MANXB INT,
+@TENNXB NVARCHAR(500),
+@DIACHI NVARCHAR(500),
+@DIENTHOAI NVARCHAR(50),
+@EMAIL NVARCHAR(500)
+)
+AS
+BEGIN
+UPDATE [dbo].[NhaXuatBan]
+   SET [TENNXB] = @TENNXB
+      ,[DIACHI] = @DIACHI
+      ,[DIENTHOAI] = @DIENTHOAI
+      ,[EMAIL] = @EMAIL
+ WHERE MANXB=@MANXB
+END
+
+CREATE PROC NXB_DELETE
+@MANXB INT
+AS
+BEGIN
+DELETE FROM [dbo].[NhaXuatBan]
+      WHERE MANXB=@MANXB
+END
+
+CREATE PROC TACGIA_INSERT
+(
+@TENTG NVARCHAR(500),
+@GIOITHIEU NVARCHAR(500),
+@DIACHI NVARCHAR(500),
+@DIENTHOAI NVARCHAR(50),
+@EMAIL NVARCHAR(500)
+)
+AS
+BEGIN
+INSERT INTO [dbo].[TacGia]
+           ([TENTG]
+           ,[GIOITHIEU]
+           ,[DIACHI]
+           ,[DIENTHOAI]
+           ,[EMAIL])
+     VALUES
+           (@TENTG
+           ,@GIOITHIEU
+		   ,@DIACHI
+           ,@DIENTHOAI
+           ,@EMAIL)
+END
+
+CREATE PROC TACGIA_UPDATE
+(
+@MATG INT,
+@TENTG NVARCHAR(500),
+@GIOITHIEU NVARCHAR(500),
+@DIACHI NVARCHAR(500),
+@DIENTHOAI NVARCHAR(50),
+@EMAIL NVARCHAR(500)
+)
+AS
+BEGIN
+UPDATE [dbo].[TacGia]
+   SET [TENTG] = @TENTG
+      ,[GIOITHIEU] = @GIOITHIEU
+      ,[DIACHI] = @DIACHI
+      ,[DIENTHOAI] = @DIENTHOAI
+      ,[EMAIL] = @EMAIL
+ WHERE MATG=@MATG
+END
+
+CREATE PROC TACGIA_DELETE
+(
+@MATG INT
+)
+AS
+BEGIN
+DELETE FROM [dbo].[TacGia]
+      WHERE MATG=@MATG
+END
+
+create proc SACH_SEARCH
+(
+	@tensach nvarchar(200)=null,
+	@tenTacGia nvarchar(200)=null,
+	@maNXB int=null,
+	@maTheLoai int=null,
+	@namXb int =null,
+	@giaMax decimal(18,0)=null,
+	@giaMin decimal(18,0)=null
+)
+AS
+BEGIN
+DECLARE @WhereClause AS nvarchar(max)
+DECLARE @Sql as nvarchar(max)
+	
+SET @Sql=N'SELECT Sach.MASACH,TENSACH,TENTG,NAMXUATBAN,GIAMUA,GIABAN,SOLUONGKHO,SACH.MOTA,THELOAI.TENTHELOAI,NhaXuatBan.TENNXB
+	FROM Sach
+	INNER JOIN TheLoai ON SACH.MATHELOAI=THELOAI.MATHELOAI 
+	INNER JOIN NhaXuatBan ON Sach.MANXB=NhaXuatBan.MANXB
+	INNER JOIN TacGia ON Sach.MATG=TacGia.MATG WHERE'
+SET @WhereClause = ' (1=1)'
+	IF (@tensach IS NOT NULL )
+	BEGIN				
+	SET @WhereClause = @WhereClause +  'AND (TENSACH like ''%'+@tensach+'%'')'
+	END
+	IF (@tenTacGia IS NOT NULL )
+	BEGIN				
+	SET @WhereClause = @WhereClause + ' AND (TENTG like ''%'+@tenTacGia+'%'')'
+	END
+	IF (@maNXB IS NOT NULL )
+	BEGIN			
+	SET @WhereClause = @WhereClause + ' AND MANXB='+STR(@maNXB)
+	END
+	IF (@maTheLoai IS NOT NULL )
+	BEGIN				
+	SET @WhereClause = @WhereClause + ' AND SACH.MATHELOAI='+STR(@maTheLoai)
+	END
+	IF (@namXb IS NOT NULL )
+	BEGIN				
+	SET @WhereClause = @WhereClause + ' AND NAMXUATBAN='+STR(@namXb)
+	END
+	IF (@giaMax IS NOT NULL and @giaMin IS NOT NULL )
+	BEGIN				
+	SET @WhereClause = @WhereClause + ' AND GIABAN>='+STR(@giaMin)+'AND'+' GIABAN<='+STR(@giaMax)
+	END
+	set @Sql=@Sql+@WhereClause
+	
+END
