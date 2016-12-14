@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.lkNhanvien = new DevExpress.XtraEditors.LookUpEdit();
-            this.nhanvienselectcomboboxBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,13 +48,12 @@
             this.lookUpEdit2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.nhanvienselectcomboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienDataSet = new SachApp.NhanVienDataSet();
-            this.nhanVienDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienTableAdapter = new SachApp.NhanVienDataSetTableAdapters.NhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkNhanvien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanvienselectcomboboxBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThongKe.Properties)).BeginInit();
@@ -70,9 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanvienselectcomboboxBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -103,18 +100,14 @@
             this.lkNhanvien.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("manv", "Mã nhân viên", 49, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNV", "Tên nhân viên", 42, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lkNhanvien.Properties.DataSource = this.nhanVienDataSetBindingSource;
+            this.lkNhanvien.Properties.DataSource = this.nhanVienBindingSource;
             this.lkNhanvien.Properties.DisplayMember = "TENNV";
             this.lkNhanvien.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
-            this.lkNhanvien.Properties.ValueMember = "manv";
+            this.lkNhanvien.Properties.ValueMember = "MANV";
             this.lkNhanvien.Size = new System.Drawing.Size(320, 20);
             this.lkNhanvien.StyleController = this.layoutControl1;
             this.lkNhanvien.TabIndex = 16;
             this.lkNhanvien.EditValueChanged += new System.EventHandler(this.lkNhanvien_EditValueChanged);
-            // 
-            // nhanvienselectcomboboxBindingSource1
-            // 
-            this.nhanvienselectcomboboxBindingSource1.DataMember = "nhanvien_select_combobox";
             // 
             // gridControl1
             // 
@@ -317,19 +310,19 @@
             this.layoutControlItem3.Text = "Từ ngày";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(69, 13);
             // 
-            // nhanvienselectcomboboxBindingSource
-            // 
-            this.nhanvienselectcomboboxBindingSource.DataMember = "nhanvien_select_combobox";
-            // 
             // nhanVienDataSet
             // 
             this.nhanVienDataSet.DataSetName = "NhanVienDataSet";
             this.nhanVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nhanVienDataSetBindingSource
+            // nhanVienBindingSource
             // 
-            this.nhanVienDataSetBindingSource.DataSource = this.nhanVienDataSet;
-            this.nhanVienDataSetBindingSource.Position = 0;
+            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource.DataSource = this.nhanVienDataSet;
+            // 
+            // nhanVienTableAdapter
+            // 
+            this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
             // frmThongKeHoaDon
             // 
@@ -343,7 +336,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lkNhanvien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanvienselectcomboboxBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThongKe.Properties)).EndInit();
@@ -358,9 +350,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanvienselectcomboboxBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,17 +372,14 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraEditors.LookUpEdit lkNhanvien;
         private DevExpress.XtraLayout.LayoutControlItem lookUpEdit2;
-      
-        private System.Windows.Forms.BindingSource nhanvienselectcomboboxBindingSource;
-      
-        private System.Windows.Forms.BindingSource nhanvienselectcomboboxBindingSource1;
     
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.DateEdit deTo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.DateEdit deFrom;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private System.Windows.Forms.BindingSource nhanVienDataSetBindingSource;
         private NhanVienDataSet nhanVienDataSet;
+        private System.Windows.Forms.BindingSource nhanVienBindingSource;
+        private NhanVienDataSetTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
     }
 }
