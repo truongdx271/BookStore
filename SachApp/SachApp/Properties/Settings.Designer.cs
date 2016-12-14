@@ -22,5 +22,16 @@ namespace SachApp.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KAEVGJL\\THINHBUI;Initial Catalog=CuaHangSach;Integrated Secur" +
+            "ity=True")]
+        public string CuaHangSachConnectionString {
+            get {
+                return ((string)(this["CuaHangSachConnectionString"]));
+            }
+        }
     }
 }

@@ -71,10 +71,16 @@ namespace SachApp
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-         //   initDate();
-            
+            // TODO: This line of code loads data into the 'quyenDataSet.Quyen' table. You can move, or remove it, as needed.
+            this.quyenTableAdapter.Fill(this.quyenDataSet.Quyen);
+            //   initDate();
+
             lockControl();
             show();
+        }
+        void init()
+        {
+           
         }
 
         private void btnThem_Click(object sender, EventArgs e)
