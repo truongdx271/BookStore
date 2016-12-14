@@ -81,7 +81,7 @@ namespace SachApp
 
             try
             {
-                gridControl1.DataSource = bus.ThongKePhieuNhap(id, time1, time2);
+               // gridControl1.DataSource = bus.ThongKePhieuNhap(id, time1, time2);
             }
             catch { }
         }
@@ -100,13 +100,13 @@ namespace SachApp
         private void frmThongKePhieuNhap_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nhanVienDataSet.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.nhanVienDataSet.NhanVien);
-            showPN();
+            //this.nhanVienTableAdapter.Fill(this.nhanVienDataSet.NhanVien);
+            //showPN();
 
-            lkNhanvien.Properties.DataSource = nvBus.GetData();
-            lkNhanvien.Properties.ValueMember = "MANV";
-            lkNhanvien.Properties.DisplayMember = "TENV";
-            lkNhanvien.ItemIndex = nvBus.GetData().Rows.Count - 1;
+            //lkNhanvien.Properties.DataSource = nvBus.GetData();
+            //lkNhanvien.Properties.ValueMember = "MANV";
+            //lkNhanvien.Properties.DisplayMember = "TENV";
+            //lkNhanvien.ItemIndex = nvBus.GetData().Rows.Count - 1;
 
         }
 

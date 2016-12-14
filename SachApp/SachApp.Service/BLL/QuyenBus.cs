@@ -8,6 +8,5 @@ namespace SachApp.Service.BLL
 {
     public class QuyenBus
     {
-        
     }
 }

@@ -66,13 +66,13 @@ namespace SachApp
         }
         void show()
         {
-            gridControl1.DataSource = bus.GetData();
+         //   gridControl1.DataSource = bus.GetData();
         }
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quyenDataSet.Quyen' table. You can move, or remove it, as needed.
-            this.quyenTableAdapter.Fill(this.quyenDataSet.Quyen);
+        //    this.quyenTableAdapter.Fill(this.quyenDataSet.Quyen);
             //   initDate();
 
             lockControl();
