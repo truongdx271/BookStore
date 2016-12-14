@@ -29,7 +29,14 @@ namespace SachApp.Service.Dao
             };
             return base.GetData("CHITIETHOADON_GET_BY_MASACH", para);
         }
-
+        public DataTable GetDataByHoaDon(int id)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ID",id)
+            };
+            return base.GetData("CHITIETHOADON_SELECT_BY_ID", para);
+        }
         public int Insert(ChiTietHoaDon obj)
         {
             SqlParameter[] para =

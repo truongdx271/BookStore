@@ -12,7 +12,34 @@ namespace SachApp.Service.BLL
     public class NhanVienBus
     {
         NhanVienDao dao = new NhanVienDao();
-        public NhanVien GetUser(string userName,string password)
+
+        public DataTable GetData()
+        {
+            return dao.GetData();
+        }
+        public DataTable GetDataByAccount(string TK, string MK)
+        {
+            return dao.GetDataByAccount(TK, MK);
+        }
+
+        public int Insert(NhanVien obj)
+        {
+            return dao.Insert(obj);
+        }
+        public int Update(NhanVien obj)
+        {
+            return dao.Update(obj);
+        }
+        public int Update_MK(NhanVien obj)
+        {
+            return dao.Update_MK(obj);
+        }
+        public int Delete(int id)
+        {
+            return dao.Delete(id);
+        }
+
+        public NhanVien GetUser(string userName, string password)
         {
             NhanVien obj = new NhanVien();
             DataTable dt = dao.GetDataByName(userName, password);
@@ -35,6 +62,7 @@ namespace SachApp.Service.BLL
             {
                 return null;
             }
+
         }
     }
 }
