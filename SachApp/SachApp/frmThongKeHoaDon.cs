@@ -22,6 +22,7 @@ namespace SachApp
             InitializeComponent();
         }
         HoaDonBus bus = new HoaDonBus();
+        NhanVienBus nvBus = new NhanVienBus();
         int id;
         bool change =false;
         string time1;
@@ -30,10 +31,13 @@ namespace SachApp
         {
           
             showHD();
+           
+         
+
         }
         void showHD()
         {
-            gridControl1.DataSource = bus.GetData();
+            gridControl1.DataSource = bus.GetDataHD();
         }
         void showTk()
         {
@@ -90,44 +94,6 @@ namespace SachApp
         }
 
 
-   //     private void deFrom_EditValueChanged(object sender, EventArgs e)
-    //    {
-       //     time1 = DateTime.ParseExact(deFrom.EditValue.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString("yyyy/MM/dd");
-            //if (!change)
-            //{
-            //    try
-            //    {
-            //        if (cbThongKe.Text == "Tuần")
-            //        {
-            //            deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddDays(7).ToString("dd/MM/yyyy");
-            //        }
-            //        else
-            //    if (cbThongKe.Text == "Tháng")
-            //        {
-            //            deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddMonths(1).ToString("dd/MM/yyyy");
-            //        }
-            //        else
-            //    if (cbThongKe.Text == "Quý")
-            //        {
-            //            deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddMonths(3).ToString("dd/MM/yyyy");
-            //        }
-            //        else
-            //    if (cbThongKe.Text == "Năm")
-            //        {
-            //            deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddYears(1).ToString("dd/MM/yyyy");
-            //        }
-            //    }
-            //    catch { }
-
-            //}
-            //else
-            //{
-        //    showTk();
-            //    change = false;
-            //}
-
-     //   }
-
         private void lkNhanvien_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -153,17 +119,8 @@ namespace SachApp
 
         private void deTo_EditValueChanged(object sender, EventArgs e)
         {
-            //if (!change)
-            //{
-          
-
             showTk();
-            //}
-            //else
-            //{
-
-            //    change = false;
-            //}
+           
         }
 
         private void deFrom_EditValueChanged_1(object sender, EventArgs e)
