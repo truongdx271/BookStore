@@ -46,12 +46,12 @@ namespace SachApp
         }
         void showKH()
         {
-            bangKH.DataSource = dao.GetData();
+      //      bangKH.DataSource = dao.GetData();
         }
 
         void showHD(int makh)
         {
-            bangHD.DataSource = dao.SelectHoaDon(makh);
+         //   bangHD.DataSource = dao.SelectHoaDon(makh);
         }
 
         private void frmKhachHang_Load(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace SachApp
             else
             {
                 obj.MAKH = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString());
-                dao.Update(obj);
+            //    dao.Update(obj);
 
                 XtraMessageBox.Show("Sửa thành công!");
                 showKH();

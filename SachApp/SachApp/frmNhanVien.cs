@@ -99,7 +99,7 @@ namespace SachApp
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            bus.Delete(int.Parse(txtMa.Text));
+         //   bus.Delete(int.Parse(txtMa.Text));
             show();
         }
         private void btnLuu_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace SachApp
 
             if (isThem)
             {    
-                bus.Insert(obj);
+             //   bus.Insert(obj);
                 XtraMessageBox.Show("Thêm thành công!");
                 show();
                 lockControl();
@@ -141,7 +141,7 @@ namespace SachApp
             else
             {
                 obj.MANV = int.Parse(txtMa.Text);
-                bus.Update(obj);
+           //     bus.Update(obj);
                 XtraMessageBox.Show("Lưu thành công!");
                 show();
                 lockControl();

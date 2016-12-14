@@ -40,7 +40,7 @@ namespace SachApp
         }
         void showHD()
         {
-            gridControl1.DataSource = bus.GetDataHD();
+           // gridControl1.DataSource = bus.GetDataHD();
         }
         void showTk()
         {
@@ -62,7 +62,7 @@ namespace SachApp
 
             try
             {
-                gridControl1.DataSource = bus.ThongKeHoaDon(id, time1, time2);
+            //    gridControl1.DataSource = bus.ThongKeHoaDon(id, time1, time2);
             }
             catch { }
 
