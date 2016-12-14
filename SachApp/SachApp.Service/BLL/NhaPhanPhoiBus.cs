@@ -20,5 +20,13 @@ namespace SachApp.Service.BLL
         {
             return dao.Insert(obj);
         }
+        public int Update(NhaPhanPhoi obj)
+        {
+            return dao.Update(obj);
+        }
+        public int Delete(int maNPP)
+        {
+            return dao.Delete(maNPP);
+        }
     }
 }

@@ -24,16 +24,6 @@ namespace SachApp.Service.Dao
             return base.GetData("PHIEUNHAP_GET_BYID", para);
         }
 
-        public DataTable ThongKePhieuNhap(int nv_id, string time1, string time2)
-        {
-            SqlParameter[] para =
-          {
-                new SqlParameter("TIME1",time1),
-                new SqlParameter("TIME2",time2),
-                new SqlParameter("MANV",nv_id),
-            };
-            return base.GetData("PHIEUNHAP_SELECT_MANY", para);
-        }
         public DataTable GetNew()
         {
             return base.GetData("PHIEUNHAP_GETNEW", null);
