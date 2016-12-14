@@ -20,7 +20,7 @@ namespace SachApp.Service.Dao
             return base.GetData("CHITIETPHIEUNHAP_GET_BY_MAPN", para);
         }
 
-        public DataTable GetDataById(int maPN, int maSach)
+        public DataTable GetDataById(int maPN,int maSach)
         {
             SqlParameter[] para =
            {
@@ -28,15 +28,6 @@ namespace SachApp.Service.Dao
                 new SqlParameter("MASACH", maSach)
             };
             return base.GetData("CHITIETPHIEUNHAP_GET_BY_MASACH", para);
-        }
-
-        public DataTable GetDataByPN(int id)
-        {
-            SqlParameter[] para =
-            {
-                new SqlParameter("ID",id)
-            };
-            return base.GetData("CHITIETPHIEUNHAP_SELECT_BY_ID", para);
         }
 
 
@@ -68,7 +59,7 @@ namespace SachApp.Service.Dao
         }
 
 
-        public int Delete(int maPN, int maSach)
+        public int Delete(int maPN,int maSach)
         {
             SqlParameter[] para =
                {
