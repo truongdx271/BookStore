@@ -17,9 +17,9 @@ namespace SachApp.Service.BLL
             return dao.GetData(maPN);
         }
 
-        public DataTable GetDataById(int maPN,int maSach)
+        public DataTable GetDataById(int maPN, int maSach)
         {
-            return dao.GetDataById(maPN,maSach);
+            return dao.GetDataById(maPN, maSach);
         }
 
         public int Insert(ChiTietPhieuNhap obj)
@@ -30,7 +30,7 @@ namespace SachApp.Service.BLL
         {
             return dao.Update(obj);
         }
-        public int Delete(int maPN,int maSach)
+        public int Delete(int maPN, int maSach)
         {
             return dao.Delete(maPN, maSach);
         }

@@ -63,7 +63,6 @@
     <Compile Include="BLL\SachBus.cs" />
     <Compile Include="BLL\TacGiaBus.cs" />
     <Compile Include="BLL\TheLoaiBus.cs" />
-    <Compile Include="BLL\ThongTinTimKiemBus.cs" />
     <Compile Include="Dao\ChiTietHoaDonDao.cs" />
     <Compile Include="Dao\ChiTietPhieuNhapDao.cs" />
     <Compile Include="Dao\HoaDonDao.cs" />
@@ -76,7 +75,6 @@
     <Compile Include="Dao\SachDao.cs" />
     <Compile Include="Dao\TacGiaDao.cs" />
     <Compile Include="Dao\TheLoaiDao.cs" />
-    <Compile Include="Dao\ThongTinTimKiemDao.cs" />
     <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\ChiTietPhieuNhap.cs" />
     <Compile Include="Models\dbContext.cs" />
@@ -90,7 +88,6 @@
     <Compile Include="Models\Sach.cs" />
     <Compile Include="Models\TacGia.cs" />
     <Compile Include="Models\TheLoai.cs" />
-    <Compile Include="Models\ThongTinTimKiem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,7 @@ namespace SachApp.Service.BLL
     public class PhieuNhapBus
     {
         PhieuNhapDao dao = new PhieuNhapDao();
-        
+
         public PhieuNhap GetNewPhieuNhap()
         {
             PhieuNhap obj = new PhieuNhap();
@@ -56,6 +56,10 @@ namespace SachApp.Service.BLL
         public int Delete(int MAPN)
         {
             return dao.Delete(MAPN);
+        }
+        public DataTable ThongKePhieuNhap(int nv_id, string time1, string time2)
+        {
+            return dao.ThongKePhieuNhap(nv_id, time1, time2);
         }
     }
 }
