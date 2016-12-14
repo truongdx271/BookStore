@@ -16,7 +16,7 @@ namespace SachApp.Service.BLL
         {
             return dao.GetData(maHD);
         }
-
+      
         public DataTable GetDataById(int maHD, int maSach)
         {
             return dao.GetDataById(maHD, maSach);

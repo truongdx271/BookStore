@@ -70,5 +70,15 @@ namespace SachApp.Service.Dao
             };
             return base.ExecuteSQL("HOADON_DELETE", para);
         }
+        public DataTable ThongKeHoaDon(int nv_id, string time1, string time2)
+        {
+            SqlParameter[] para =
+          {
+                new SqlParameter("TIME1",time1),
+                new SqlParameter("TIME2",time2),
+                new SqlParameter("MANV",nv_id),
+            };
+            return base.GetData("HOADON_SELECT_MANY", para);
+        }
     }
 }

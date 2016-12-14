@@ -57,5 +57,9 @@ namespace SachApp.Service.BLL
         {
             return dao.Delete(MAPN);
         }
+        public DataTable ThongKePhieuNhap(int nv_id, string time1, string time2)
+        {
+            return dao.ThongKePhieuNhap(nv_id, time1, time2);
+        }
     }
 }

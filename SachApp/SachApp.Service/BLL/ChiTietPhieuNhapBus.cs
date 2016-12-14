@@ -21,7 +21,7 @@ namespace SachApp.Service.BLL
         {
             return dao.GetDataById(maPN,maSach);
         }
-
+     
         public int Insert(ChiTietPhieuNhap obj)
         {
             return dao.Insert(obj);

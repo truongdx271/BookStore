@@ -30,6 +30,15 @@ namespace SachApp.Service.Dao
             return base.GetData("CHITIETPHIEUNHAP_GET_BY_MASACH", para);
         }
 
+        public DataTable GetDataByPN(int id)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ID",id)
+            };
+            return base.GetData("CHITIETPHIEUNHAP_SELECT_BY_ID", para);
+        }
+
 
         public int Insert(ChiTietPhieuNhap obj)
         {
