@@ -29,6 +29,7 @@ namespace SachApp
         DataTable dtKH = new DataTable();
         DataTable dtHD = new DataTable();
         HoaDon hdObj = new HoaDon();
+        public NhanVien nvObj = new NhanVien();
 
         void KhoaDieuKhien()
         {
@@ -70,6 +71,7 @@ namespace SachApp
 
         private void frmBanSach_Load(object sender, EventArgs e)
         {
+            txtTenNhanVien.Text = nvObj.TENNV;
             KhoaDieuKhien();
 
             DataTable dt = sBus.GetData();
@@ -115,7 +117,7 @@ namespace SachApp
             luKhachHang.ItemIndex = -1;
 
             hdObj.NGAYLAP = DateTime.Parse(dENgayLap.Text.ToString());
-            hdObj.MANV = 1;
+            hdObj.MANV = nvObj.MANV;
             hdObj.MAKH = int.Parse(luKhachHang.EditValue.ToString());
             hdObj.TONGTIEN = 0;
             hdBus.Insert(hdObj);

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using SachApp.Service.Models;
 
 namespace SachApp
 {
@@ -17,6 +18,13 @@ namespace SachApp
         {
             InitializeComponent();
         }
+
+        public NhanVien nvObj;
+
+
+
+
+
         Form CheckActiveForm(Type fType)
         {
             foreach (var f in this.MdiChildren)
@@ -61,6 +69,7 @@ namespace SachApp
             else
             {
                 frmNhapSach fr = new frmNhapSach();
+                fr.nvObj = nvObj;
                 fr.MdiParent = this;
                 fr.Show();
             }
@@ -79,9 +88,24 @@ namespace SachApp
             else
             {
                 frmBanSach fr = new frmBanSach();
+                fr.nvObj = nvObj;
                 fr.MdiParent = this;
                 fr.Show();
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            if (nvObj.MAQUYEN == 2)
+            {
+                //btnBanSach.Enabled = false;
+                //btnNhapSach.Enabled = false;
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
