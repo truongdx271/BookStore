@@ -28,6 +28,26 @@ namespace SachApp.Service.Dao
             };
             return base.ExecuteSQL("NPP_INSERT", para);
         }
-
+        public int Delete(int maNPP)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("MANPP",maNPP)
+            };
+            return base.ExecuteSQL("NPP_DELETE", para);
+        }
+        public int Update(NhaPhanPhoi obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("MANPP",obj.MANPP),
+                new SqlParameter("TENNPP",obj.TENNPP),
+                new SqlParameter("DIACHI",obj.DIACHI),
+                new SqlParameter("DIENTHOAI",obj.DIENTHOAI),
+                new SqlParameter("EMAIL",obj.EMAIL),
+                new SqlParameter("FAX",obj.FAX)
+            };
+            return base.ExecuteSQL("NPP_UPDATE", para);
+        }
     }
 }

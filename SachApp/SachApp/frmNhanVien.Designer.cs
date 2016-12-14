@@ -78,9 +78,9 @@ namespace SachApp
             this.txtNgaySinh = new DevExpress.XtraLayout.LayoutControlItem();
             this.comboBoxEditGT = new DevExpress.XtraLayout.LayoutControlItem();
             this.layout1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.quyenDataSet = new QuyenDataSet();
+      //      this.quyenDataSet = new QuyenDataSet();
             this.quyenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.quyenTableAdapter = new Service.QuyenDataSetTableAdapters.QuyenTableAdapter();
+        //    this.quyenTableAdapter = new Service.QuyenDataSetTableAdapters.QuyenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkQuyen.Properties)).BeginInit();
@@ -115,7 +115,7 @@ namespace SachApp
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditGT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenDataSet)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.quyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -599,17 +599,17 @@ namespace SachApp
             // 
             // quyenDataSet
             // 
-            this.quyenDataSet.DataSetName = "QuyenDataSet";
-            this.quyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         //   this.quyenDataSet.DataSetName = "QuyenDataSet";
+        //    this.quyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // quyenBindingSource1
             // 
             this.quyenBindingSource1.DataMember = "Quyen";
-            this.quyenBindingSource1.DataSource = this.quyenDataSet;
+          //  this.quyenBindingSource1.DataSource = this.quyenDataSet;
             // 
             // quyenTableAdapter
             // 
-            this.quyenTableAdapter.ClearBeforeFill = true;
+          //  this.quyenTableAdapter.ClearBeforeFill = true;
             // 
             // frmNhanVien
             // 
@@ -653,7 +653,7 @@ namespace SachApp
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditGT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenDataSet)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.quyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -708,8 +708,8 @@ namespace SachApp
         private System.Windows.Forms.BindingSource quyenBindingSource;
    
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private QuyenDataSet quyenDataSet;
+     //   private QuyenDataSet quyenDataSet;
         private System.Windows.Forms.BindingSource quyenBindingSource1;
-        private Service.QuyenDataSetTableAdapters.QuyenTableAdapter quyenTableAdapter;
+       // private Service.QuyenDataSetTableAdapters.QuyenTableAdapter quyenTableAdapter;
     }
 }
