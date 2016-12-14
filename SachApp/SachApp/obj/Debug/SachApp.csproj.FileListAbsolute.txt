@@ -363,3 +363,23 @@ D:\Nam4DH\BookStore\SachApp\SachApp\bin\Debug\es\DevExpress.XtraCharts.v15.1.Wiz
 D:\Nam4DH\BookStore\SachApp\SachApp\bin\Debug\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 D:\Nam4DH\BookStore\SachApp\SachApp\bin\Debug\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 D:\Nam4DH\BookStore\SachApp\SachApp\obj\Debug\SachApp.rptPhieuNhap.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.csprojResolveAssemblyReference.cache
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmAddKhachHang.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmAddNPP.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmAddSach.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmBanSach.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmDangNhap.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmListSach.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmMain.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmNhaPhanPhoi.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmNhapSach.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmNhaXuatBan.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmTacGia.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmTheLoai.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmTimKiem.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.Properties.Resources.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.reportPhieuNhap.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.rptPhieuNhap.resources
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.csproj.GenerateResource.Cache
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\obj\Debug\SachApp.exe.licenses
+C:\Users\ANH MINH\Desktop\BOOKSTORE\BookStore\SachApp\SachApp\bin\Debug\SachApp.exe.config
