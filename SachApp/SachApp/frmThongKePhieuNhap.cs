@@ -20,6 +20,7 @@ namespace SachApp
         {
             InitializeComponent();
         }
+        NhanVienBus nvBus = new NhanVienBus();
 
         void show()
         {
@@ -29,14 +30,10 @@ namespace SachApp
         int id;
         string time1 = null;
         string time2 = null;
-        private void frmThongKe_Load(object sender, EventArgs e)
+        
+        void showPN()
         {
-            
-            showHD();
-        }
-        void showHD()
-        {
-            //gridControl1.DataSource = dao.GetData();
+            gridControl1.DataSource = bus.GetData();
         }
 
         private void cbThongKe_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,7 +43,7 @@ namespace SachApp
                 deTo.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 deFrom.Text = DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy");
             }
-            if (cbThongKe.Text == "Tháng")
+            if (cbThongKe.Text == "Tháng") 
             {
                 deTo.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 deFrom.Text = DateTime.Now.AddMonths(-1).ToString("dd/MM/yyyy");
@@ -91,25 +88,7 @@ namespace SachApp
 
         private void deFrom_EditValueChanged(object sender, EventArgs e)
         {
-            if (cbThongKe.Text == "Tuần")
-            {
-                deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddDays(7).ToString("dd/MM/yyyy");
-            }
-            else
-            if (cbThongKe.Text == "Tháng")
-            {
-                deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddMonths(1).ToString("dd/MM/yyyy");
-            }
-            else
-            if (cbThongKe.Text == "Quý")
-            {
-                deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddMonths(3).ToString("dd/MM/yyyy");
-            }
-            else
-            if (cbThongKe.Text == "Năm")
-            {
-                deTo.Text = Convert.ToDateTime(deFrom.EditValue.ToString()).AddYears(1).ToString("dd/MM/yyyy");
-            }
+           
             showTk();
         }
 
@@ -120,7 +99,14 @@ namespace SachApp
 
         private void frmThongKePhieuNhap_Load(object sender, EventArgs e)
         {
-         
+            // TODO: This line of code loads data into the 'nhanVienDataSet.NhanVien' table. You can move, or remove it, as needed.
+            this.nhanVienTableAdapter.Fill(this.nhanVienDataSet.NhanVien);
+            showPN();
+
+            lkNhanvien.Properties.DataSource = nvBus.GetData();
+            lkNhanvien.Properties.ValueMember = "MANV";
+            lkNhanvien.Properties.DisplayMember = "TENV";
+            lkNhanvien.ItemIndex = nvBus.GetData().Rows.Count - 1;
 
         }
 
@@ -140,6 +126,33 @@ namespace SachApp
         private void deTo_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbThongKe_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //if (cbThongKe.Text == "Tuần")
+            //{
+            //    deTo.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            //    deFrom.Text = DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy");
+
+
+            //}
+            //if (cbThongKe.Text == "Tháng")
+            //{
+            //    deTo.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            //    deFrom.Text = DateTime.Now.AddMonths(-1).ToString("dd/MM/yyyy");
+            //}
+            //if (cbThongKe.Text == "Quý")
+            //{
+            //    deTo.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            //    deFrom.Text = DateTime.Now.AddMonths(-3).ToString("dd/MM/yyyy");
+            //}
+            //if (cbThongKe.Text == "Năm")
+            //{
+            //    deTo.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            //    deFrom.Text = DateTime.Now.AddYears(-1).ToString("dd/MM/yyyy");
+            //}
+            //showTk();
         }
     }
 }

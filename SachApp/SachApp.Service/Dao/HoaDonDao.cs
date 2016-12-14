@@ -15,6 +15,10 @@ namespace SachApp.Service.Dao
         {
             return base.GetData("HOADON_GETALL", null);
         }
+        public DataTable GetDataHD()
+        {
+            return base.GetData("HOADON_SELECT_ALL", null);
+        }
         public DataTable GetDataByID(int MAHD)
         {
             SqlParameter[] para =

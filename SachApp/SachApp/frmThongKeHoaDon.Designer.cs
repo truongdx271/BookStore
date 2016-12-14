@@ -50,6 +50,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.nhanvienselectcomboboxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienDataSet = new SachApp.NhanVienDataSet();
+            this.nhanVienDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkNhanvien.Properties)).BeginInit();
@@ -69,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienselectcomboboxBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -99,7 +103,7 @@
             this.lkNhanvien.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("manv", "Mã nhân viên", 49, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNV", "Tên nhân viên", 42, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lkNhanvien.Properties.DataSource = this.nhanvienselectcomboboxBindingSource1;
+            this.lkNhanvien.Properties.DataSource = this.nhanVienDataSetBindingSource;
             this.lkNhanvien.Properties.DisplayMember = "TENNV";
             this.lkNhanvien.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.OnlyInPopup;
             this.lkNhanvien.Properties.ValueMember = "manv";
@@ -317,6 +321,16 @@
             // 
             this.nhanvienselectcomboboxBindingSource.DataMember = "nhanvien_select_combobox";
             // 
+            // nhanVienDataSet
+            // 
+            this.nhanVienDataSet.DataSetName = "NhanVienDataSet";
+            this.nhanVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nhanVienDataSetBindingSource
+            // 
+            this.nhanVienDataSetBindingSource.DataSource = this.nhanVienDataSet;
+            this.nhanVienDataSetBindingSource.Position = 0;
+            // 
             // frmThongKeHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +359,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienselectcomboboxBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +391,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.DateEdit deFrom;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.Windows.Forms.BindingSource nhanVienDataSetBindingSource;
+        private NhanVienDataSet nhanVienDataSet;
     }
 }
