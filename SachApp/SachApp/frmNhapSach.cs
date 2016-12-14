@@ -28,6 +28,9 @@ namespace SachApp
         DataTable dtNPP = new DataTable();
         DataTable dtCTPN = new DataTable();
         PhieuNhap pnObj = new PhieuNhap();
+
+        public NhanVien nvObj = new NhanVien();
+
        // List<ChiTietPhieuNhap> listChiTiet = new List<ChiTietPhieuNhap>();
         //  BindingList<>
 
@@ -69,7 +72,7 @@ namespace SachApp
 
         private void frmNhapSach_Load(object sender, EventArgs e)
         {
-            
+            txtTenNv.Text = nvObj.TENNV;
             KhoaDieuKhien();
             //dEditNgayLap.Text = DateTime.Now.ToString();
             
@@ -206,7 +209,7 @@ namespace SachApp
             dEditNgayLap.Text = DateTime.Now.ToString();
 
             pnObj.NGAYLAP = DateTime.Parse(dEditNgayLap.Text.ToString());
-            pnObj.MANV = 1;//Chua co nhan vien
+            pnObj.MANV = nvObj.MANV;//Chua co nhan vien
             pnObj.MANPP = int.Parse(luNPP.EditValue.ToString());
             pnObj.TONGTIEN = 0;
             pnBus.Insert(pnObj);

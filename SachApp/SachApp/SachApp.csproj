@@ -35,15 +35,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -106,11 +117,23 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhaPhanPhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhaPhanPhoi.Designer.cs">
+      <DependentUpon>frmNhaPhanPhoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNhapSach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNhapSach.Designer.cs">
       <DependentUpon>frmNhapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhaXuatBan.Designer.cs">
+      <DependentUpon>frmNhaXuatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTacGia.cs">
       <SubType>Form</SubType>
@@ -124,8 +147,26 @@
     <Compile Include="frmTheLoai.Designer.cs">
       <DependentUpon>frmTheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiem.Designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportPhieuNhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportPhieuNhap.Designer.cs">
+      <DependentUpon>reportPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptPhieuNhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPhieuNhap.Designer.cs">
+      <DependentUpon>rptPhieuNhap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAddKhachHang.resx">
       <DependentUpon>frmAddKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,14 +188,23 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaPhanPhoi.resx">
+      <DependentUpon>frmNhaPhanPhoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNhapSach.resx">
       <DependentUpon>frmNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaXuatBan.resx">
+      <DependentUpon>frmNhaXuatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTacGia.resx">
       <DependentUpon>frmTacGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTheLoai.resx">
       <DependentUpon>frmTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -167,6 +217,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportPhieuNhap.resx">
+      <DependentUpon>reportPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuNhap.resx">
+      <DependentUpon>rptPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
