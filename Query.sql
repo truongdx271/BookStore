@@ -2,7 +2,7 @@
 
 
 --21/11
- USE CuaHangSach
+ USE CuaHangSach1
 GO
 CREATE PROC NXB_GETALL
 AS
