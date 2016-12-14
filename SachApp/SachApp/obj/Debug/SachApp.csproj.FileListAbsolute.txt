@@ -363,3 +363,4 @@ D:\Nam4DH\BookStore\SachApp\SachApp\bin\Debug\es\DevExpress.XtraCharts.v15.1.Wiz
 D:\Nam4DH\BookStore\SachApp\SachApp\bin\Debug\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 D:\Nam4DH\BookStore\SachApp\SachApp\bin\Debug\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 D:\Nam4DH\BookStore\SachApp\SachApp\obj\Debug\SachApp.rptPhieuNhap.resources
+D:\Nam4DH\BookStore\SachApp\SachApp\obj\Debug\SachApp.reportPhieuNhap.resources

@@ -12,6 +12,7 @@ using SachApp.Service.Dao;
 using SachApp.Service.Models;
 using SachApp.Service.BLL;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraReports.UI;
 
 namespace SachApp
 {
@@ -45,7 +46,7 @@ namespace SachApp
             btnAddSach.Enabled = false;
             btnThemMoi.Enabled = true;
             btnTinhTien.Enabled = false;
-            btnIn.Enabled = false;
+            //btnIn.Enabled = false;
         }
 
         void MoKhoaDieuKhien()
@@ -59,7 +60,7 @@ namespace SachApp
             btnAddSach.Enabled = true;
             btnThemMoi.Enabled = false;
             btnTinhTien.Enabled = true;
-            btnIn.Enabled = true;
+            //btnIn.Enabled = true;
         }
 
         void XoaText()
@@ -193,10 +194,20 @@ namespace SachApp
             pnBus.UpdateNPP(pnObj);
         }
 
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-            //XtraMessageBox.Show(luNPP.EditValue.ToString());
-        }
+        //private void btnIn_Click(object sender, EventArgs e)
+        //{
+        //    //XtraMessageBox.Show(luNPP.EditValue.ToString());
+        //    reportPhieuNhap rp = new reportPhieuNhap(pnObj.MAPN);
+
+        //    rp.BeforePrint += Rp_BeforePrint;
+        //    //rp.ShowDesigner();
+        //    rp.ShowPreview();
+        //}
+
+        //private void Rp_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //{
+        //    ((reportPhieuNhap)sender).Parameters["maPN"].Value = pnObj.MAPN;
+        //}
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
@@ -220,6 +231,10 @@ namespace SachApp
         {
             pnObj.TONGTIEN = int.Parse(txtTT.Text);
             pnBus.Update(pnObj);
+
+            reportPhieuNhap rp = new reportPhieuNhap(pnObj.MAPN);
+            rp.ShowPreview();
+
             XoaText();
             gridChiTietPhieuNhap.DataSource = null;
             dgvPhieuNhap.Columns.Clear();
