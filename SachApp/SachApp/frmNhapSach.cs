@@ -12,6 +12,7 @@ using SachApp.Service.Dao;
 using SachApp.Service.Models;
 using SachApp.Service.BLL;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraReports.UI;
 
 namespace SachApp
 {
@@ -28,6 +29,9 @@ namespace SachApp
         DataTable dtNPP = new DataTable();
         DataTable dtCTPN = new DataTable();
         PhieuNhap pnObj = new PhieuNhap();
+
+        public NhanVien nvObj = new NhanVien();
+
        // List<ChiTietPhieuNhap> listChiTiet = new List<ChiTietPhieuNhap>();
         //  BindingList<>
 
@@ -42,7 +46,7 @@ namespace SachApp
             btnAddSach.Enabled = false;
             btnThemMoi.Enabled = true;
             btnTinhTien.Enabled = false;
-            btnIn.Enabled = false;
+            //btnIn.Enabled = false;
         }
 
         void MoKhoaDieuKhien()
@@ -56,7 +60,7 @@ namespace SachApp
             btnAddSach.Enabled = true;
             btnThemMoi.Enabled = false;
             btnTinhTien.Enabled = true;
-            btnIn.Enabled = true;
+            //btnIn.Enabled = true;
         }
 
         void XoaText()
@@ -69,7 +73,7 @@ namespace SachApp
 
         private void frmNhapSach_Load(object sender, EventArgs e)
         {
-            
+            txtTenNv.Text = nvObj.TENNV;
             KhoaDieuKhien();
             //dEditNgayLap.Text = DateTime.Now.ToString();
             
@@ -190,10 +194,20 @@ namespace SachApp
             pnBus.UpdateNPP(pnObj);
         }
 
-        private void btnIn_Click(object sender, EventArgs e)
-        {
-            //XtraMessageBox.Show(luNPP.EditValue.ToString());
-        }
+        //private void btnIn_Click(object sender, EventArgs e)
+        //{
+        //    //XtraMessageBox.Show(luNPP.EditValue.ToString());
+        //    reportPhieuNhap rp = new reportPhieuNhap(pnObj.MAPN);
+
+        //    rp.BeforePrint += Rp_BeforePrint;
+        //    //rp.ShowDesigner();
+        //    rp.ShowPreview();
+        //}
+
+        //private void Rp_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //{
+        //    ((reportPhieuNhap)sender).Parameters["maPN"].Value = pnObj.MAPN;
+        //}
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
@@ -206,7 +220,7 @@ namespace SachApp
             dEditNgayLap.Text = DateTime.Now.ToString();
 
             pnObj.NGAYLAP = DateTime.Parse(dEditNgayLap.Text.ToString());
-            pnObj.MANV = 1;//Chua co nhan vien
+            pnObj.MANV = nvObj.MANV;//Chua co nhan vien
             pnObj.MANPP = int.Parse(luNPP.EditValue.ToString());
             pnObj.TONGTIEN = 0;
             pnBus.Insert(pnObj);
@@ -217,6 +231,10 @@ namespace SachApp
         {
             pnObj.TONGTIEN = int.Parse(txtTT.Text);
             pnBus.Update(pnObj);
+
+            reportPhieuNhap rp = new reportPhieuNhap(pnObj.MAPN);
+            rp.ShowPreview();
+
             XoaText();
             gridChiTietPhieuNhap.DataSource = null;
             dgvPhieuNhap.Columns.Clear();
