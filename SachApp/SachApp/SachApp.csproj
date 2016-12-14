@@ -126,6 +126,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportPhieuNhap.cs" />
+    <Compile Include="reportPhieuNhap.Designer.cs">
+      <DependentUpon>reportPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptPhieuNhap.cs" />
+    <Compile Include="rptPhieuNhap.Designer.cs">
+      <DependentUpon>rptPhieuNhap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAddKhachHang.resx">
       <DependentUpon>frmAddKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +175,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportPhieuNhap.resx">
+      <DependentUpon>reportPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuNhap.resx">
+      <DependentUpon>rptPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
