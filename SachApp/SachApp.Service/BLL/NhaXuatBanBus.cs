@@ -1,5 +1,4 @@
 ﻿using SachApp.Service.Dao;
-using SachApp.Service.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,18 +14,6 @@ namespace SachApp.Service.BLL
         public DataTable GetNXB()
         {
             return dao.GetNXB();
-        }
-        public int Insert(NhaXuatBan obj)
-        {
-            return dao.Insert(obj);
-        }
-        public int Update(NhaXuatBan obj)
-        {
-            return dao.Update(obj);
-        }
-        public int Delete(int maNXB)
-        {
-            return dao.Delete(maNXB);
         }
     }
 }

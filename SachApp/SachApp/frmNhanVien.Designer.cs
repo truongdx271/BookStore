@@ -1,4 +1,5 @@
 ﻿using DevExpress.Utils;
+using SachApp.Service;
 
 namespace SachApp
 {
@@ -77,9 +78,9 @@ namespace SachApp
             this.txtNgaySinh = new DevExpress.XtraLayout.LayoutControlItem();
             this.comboBoxEditGT = new DevExpress.XtraLayout.LayoutControlItem();
             this.layout1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.quyenDataSet = new SachApp.QuyenDataSet();
+            this.quyenDataSet = new QuyenDataSet();
             this.quyenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.quyenTableAdapter = new SachApp.QuyenDataSetTableAdapters.QuyenTableAdapter();
+            this.quyenTableAdapter = new Service.QuyenDataSetTableAdapters.QuyenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkQuyen.Properties)).BeginInit();
@@ -709,6 +710,6 @@ namespace SachApp
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private QuyenDataSet quyenDataSet;
         private System.Windows.Forms.BindingSource quyenBindingSource1;
-        private QuyenDataSetTableAdapters.QuyenTableAdapter quyenTableAdapter;
+        private Service.QuyenDataSetTableAdapters.QuyenTableAdapter quyenTableAdapter;
     }
 }

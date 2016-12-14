@@ -40,16 +40,18 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbThongKe = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lkNhanvien = new DevExpress.XtraEditors.LookUpEdit();
-            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienDataSet = new SachApp.NhanVienDataSet();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.nhanVienDataSet = new SachApp.NhanVienDataSet();
-            this.nhanVienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVienTableAdapter = new SachApp.NhanVienDataSetTableAdapters.NhanVienTableAdapter();
+            this.cuaHangSachDataSet = new SachApp.CuaHangSachDataSet();
+            this.cuaHangSachDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deTo.Properties.CalendarTimeProperties)).BeginInit();
@@ -60,15 +62,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThongKe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkNhanvien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuaHangSachDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuaHangSachDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -194,16 +198,22 @@
             this.lkNhanvien.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MANV", "Mã", 51, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TENNV", "Tên nhân viên", 42, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.lkNhanvien.Properties.DataSource = this.nhanVienBindingSource1;
+            this.lkNhanvien.Properties.DataSource = this.cuaHangSachDataSetBindingSource;
             this.lkNhanvien.Properties.DisplayMember = "TENNV";
             this.lkNhanvien.Properties.ValueMember = "MANV";
             this.lkNhanvien.Size = new System.Drawing.Size(387, 20);
             this.lkNhanvien.StyleController = this.layoutControl1;
             this.lkNhanvien.TabIndex = 4;
             // 
-            // nhanVienBindingSource
+            // nhanVienBindingSource1
             // 
-            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource1.DataMember = "NhanVien";
+            this.nhanVienBindingSource1.DataSource = this.nhanVienDataSet;
+            // 
+            // nhanVienDataSet
+            // 
+            this.nhanVienDataSet.DataSetName = "NhanVienDataSet";
+            this.nhanVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // layoutControlGroup1
             // 
@@ -265,19 +275,23 @@
             this.layoutControlItem4.Text = "đến";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(69, 13);
             // 
-            // nhanVienDataSet
+            // nhanVienBindingSource
             // 
-            this.nhanVienDataSet.DataSetName = "NhanVienDataSet";
-            this.nhanVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nhanVienBindingSource1
-            // 
-            this.nhanVienBindingSource1.DataMember = "NhanVien";
-            this.nhanVienBindingSource1.DataSource = this.nhanVienDataSet;
+            this.nhanVienBindingSource.DataMember = "NhanVien";
             // 
             // nhanVienTableAdapter
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // cuaHangSachDataSet
+            // 
+            this.cuaHangSachDataSet.DataSetName = "CuaHangSachDataSet";
+            this.cuaHangSachDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cuaHangSachDataSetBindingSource
+            // 
+            this.cuaHangSachDataSetBindingSource.DataSource = this.cuaHangSachDataSet;
+            this.cuaHangSachDataSetBindingSource.Position = 0;
             // 
             // frmThongKePhieuNhap
             // 
@@ -298,15 +312,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThongKe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkNhanvien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuaHangSachDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuaHangSachDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,5 +352,7 @@
         private NhanVienDataSet nhanVienDataSet;
         private System.Windows.Forms.BindingSource nhanVienBindingSource1;
         private NhanVienDataSetTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
+        private System.Windows.Forms.BindingSource cuaHangSachDataSetBindingSource;
+        private CuaHangSachDataSet cuaHangSachDataSet;
     }
 }
