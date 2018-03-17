@@ -34,7 +34,7 @@ namespace SachApp
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.lkQuyen = new DevExpress.XtraEditors.LookUpEdit();
-            this.quyenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quyenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cbGT = new DevExpress.XtraEditors.ComboBoxEdit();
             this.deNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
@@ -78,13 +78,11 @@ namespace SachApp
             this.txtNgaySinh = new DevExpress.XtraLayout.LayoutControlItem();
             this.comboBoxEditGT = new DevExpress.XtraLayout.LayoutControlItem();
             this.layout1 = new DevExpress.XtraLayout.LayoutControlItem();
-      //      this.quyenDataSet = new QuyenDataSet();
-            this.quyenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-        //    this.quyenTableAdapter = new Service.QuyenDataSetTableAdapters.QuyenTableAdapter();
+            this.quyenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkQuyen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbGT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties)).BeginInit();
@@ -115,8 +113,7 @@ namespace SachApp
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditGT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout1)).BeginInit();
-         //   ((System.ComponentModel.ISupportInitialize)(this.quyenDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -164,9 +161,9 @@ namespace SachApp
             this.lkQuyen.StyleController = this.layoutControl1;
             this.lkQuyen.TabIndex = 31;
             // 
-            // quyenBindingSource
+            // quyenBindingSource1
             // 
-            this.quyenBindingSource.DataMember = "Quyen";
+            this.quyenBindingSource1.DataMember = "Quyen";
             // 
             // cbGT
             // 
@@ -597,19 +594,9 @@ namespace SachApp
             this.layout1.Text = "Quyền";
             this.layout1.TextSize = new System.Drawing.Size(68, 13);
             // 
-            // quyenDataSet
+            // quyenBindingSource
             // 
-         //   this.quyenDataSet.DataSetName = "QuyenDataSet";
-        //    this.quyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // quyenBindingSource1
-            // 
-            this.quyenBindingSource1.DataMember = "Quyen";
-          //  this.quyenBindingSource1.DataSource = this.quyenDataSet;
-            // 
-            // quyenTableAdapter
-            // 
-          //  this.quyenTableAdapter.ClearBeforeFill = true;
+            this.quyenBindingSource.DataMember = "Quyen";
             // 
             // frmNhanVien
             // 
@@ -622,7 +609,7 @@ namespace SachApp
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lkQuyen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbGT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties)).EndInit();
@@ -653,8 +640,7 @@ namespace SachApp
             ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditGT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout1)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.quyenDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quyenBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
