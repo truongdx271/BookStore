@@ -395,7 +395,6 @@ C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\CuaHangSach.frmDoiMK.resources
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmKhachHang.resources
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmListSach.resources
-C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmMain.resources
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmNhanVien.resources
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmNhaPhanPhoi.resources
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.frmNhapSach.resources
@@ -558,3 +557,4 @@ C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\bin\Debug
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.csprojResolveAssemblyReference.cache
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.exe
 C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.pdb
+C:\Users\buith\Desktop\T3_ThietKeGiaoDienUID\BookStore\SachApp\SachApp\obj\Debug\SachApp.x.resources
