@@ -1,6 +1,6 @@
 ﻿namespace SachApp
 {
-    partial class frmMain
+    partial class x
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(x));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnNhapSach = new DevExpress.XtraBars.BarButtonItem();
             this.btnBanSach = new DevExpress.XtraBars.BarButtonItem();
@@ -45,11 +45,12 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnNhanVien = new DevExpress.XtraBars.BarButtonItem();
-            this.btnKhachHang = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnHoaDon = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +66,13 @@
             this.btnTheLoai,
             this.btnNXB,
             this.btnTacGia,
-            this.btnNhanVien,
-            this.btnKhachHang,
-            this.btnHoaDon,
-            this.btnPhieuNhap});
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4,
+            this.barButtonItem5});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 11;
+            this.ribbon.MaxItemId = 12;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -124,6 +126,7 @@
             this.btnNXB.Id = 5;
             this.btnNXB.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNXB.LargeGlyph")));
             this.btnNXB.Name = "btnNXB";
+            this.btnNXB.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNXB_ItemClick);
             // 
             // btnTacGia
             // 
@@ -184,55 +187,60 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnNhanVien);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnKhachHang);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Người dùng";
             // 
-            // btnNhanVien
+            // barButtonItem1
             // 
-            this.btnNhanVien.Caption = "Nhân viên";
-            this.btnNhanVien.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Glyph")));
-            this.btnNhanVien.Id = 7;
-            this.btnNhanVien.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.LargeGlyph")));
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhanVien_ItemClick);
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 7;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // btnKhachHang
+            // barButtonItem2
             // 
-            this.btnKhachHang.Caption = "Khách hàng";
-            this.btnKhachHang.Glyph = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Glyph")));
-            this.btnKhachHang.Id = 8;
-            this.btnKhachHang.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.LargeGlyph")));
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhachHang_ItemClick);
+            this.barButtonItem2.Caption = "Nhân viên";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
+            this.barButtonItem2.Id = 8;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Khách hàng";
+            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
+            this.barButtonItem3.Id = 9;
+            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnHoaDon);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnPhieuNhap);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Thống kê";
             // 
-            // btnHoaDon
+            // barButtonItem4
             // 
-            this.btnHoaDon.Caption = "Thống kê hóa đơn";
-            this.btnHoaDon.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.Glyph")));
-            this.btnHoaDon.Id = 9;
-            this.btnHoaDon.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnHoaDon.LargeGlyph")));
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHoaDon_ItemClick);
+            this.barButtonItem4.Caption = "Thống kê hóa đơn";
+            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
+            this.barButtonItem4.Id = 10;
+            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
-            // btnPhieuNhap
+            // barButtonItem5
             // 
-            this.btnPhieuNhap.Caption = "Thống kê phiếu nhập";
-            this.btnPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPhieuNhap.Glyph")));
-            this.btnPhieuNhap.Id = 10;
-            this.btnPhieuNhap.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnPhieuNhap.LargeGlyph")));
-            this.btnPhieuNhap.Name = "btnPhieuNhap";
-            this.btnPhieuNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhieuNhap_ItemClick);
+            this.barButtonItem5.Caption = "Thống kê phiếu nhập";
+            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
+            this.barButtonItem5.Id = 11;
+            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
+            this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // frmMain
+            // x
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,7 +248,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
-            this.Name = "frmMain";
+            this.Name = "x";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Hệ thống quản lý cửa hàng bán sách";
@@ -270,11 +278,12 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraBars.BarButtonItem btnNhanVien;
-        private DevExpress.XtraBars.BarButtonItem btnKhachHang;
-        private DevExpress.XtraBars.BarButtonItem btnHoaDon;
-        private DevExpress.XtraBars.BarButtonItem btnPhieuNhap;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
     }
 }

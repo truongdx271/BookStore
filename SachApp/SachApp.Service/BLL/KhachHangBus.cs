@@ -20,21 +20,5 @@ namespace SachApp.Service.BLL
         {
             return dao.Insert(obj);
         }
-        public int Update(KhachHang obj)
-        {
-            return dao.Update(obj);
-        }
-        public int Delete(int id)
-        {
-            return dao.Delete(id);
-        }
-        public int SelectByID(int id)
-        {
-            return dao.SelectById(id);
-        }
-        public DataTable SelectByHD(int id)
-        {
-            return dao.SelectHoaDon(id);
-        }
     }
 }

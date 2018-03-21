@@ -30,11 +30,8 @@ namespace SachApp
         private void frmThongKe_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nhanVienDataSet.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.nhanVienDataSet.NhanVien);
-            // TODO: This line of code loads data into the 'cuaHangSachDataSet.NhanVien' table. You can move, or remove it, as needed.
-        
-            // TODO: This line of code loads data into the 'nhanVienDataSet.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.nhanVienDataSet.NhanVien);
+       //     this.nhanVienTableAdapter.Fill(this.nhanVienDataSet.NhanVien);
+            
 
             showHD();
            
@@ -43,7 +40,7 @@ namespace SachApp
         }
         void showHD()
         {
-            gridControl1.DataSource = bus.GetDataHD();
+           // gridControl1.DataSource = bus.GetDataHD();
         }
         void showTk()
         {
@@ -65,7 +62,7 @@ namespace SachApp
 
             try
             {
-                gridControl1.DataSource = bus.ThongKeHoaDon(id, time1, time2);
+            //    gridControl1.DataSource = bus.ThongKeHoaDon(id, time1, time2);
             }
             catch { }
 

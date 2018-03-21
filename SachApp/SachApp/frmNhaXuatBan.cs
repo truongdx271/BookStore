@@ -23,7 +23,8 @@ namespace SachApp
     NhaXuatBan nxb = new NhaXuatBan();
     NhaXuatBanBus nxbBus = new NhaXuatBanBus();
     bool IsInsert = false;
-    void KhoaDieuKhien()
+        public NhanVien nvObj = new NhanVien();
+        void KhoaDieuKhien()
     {
 
         txtTenNXB.Enabled = false;

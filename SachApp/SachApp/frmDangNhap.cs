@@ -27,7 +27,7 @@ namespace SachApp
             obj = nvBus.GetUser(txtUserName.Text, txtPassword.Text);
             if (obj != null)
             {
-                frmMain frm = new frmMain();
+                x frm = new x();
                 frm.nvObj = obj;
                 frm.Show();
                 Hide();

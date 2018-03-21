@@ -15,10 +15,6 @@ namespace SachApp.Service.Dao
         {
             return base.GetData("HOADON_GETALL", null);
         }
-        public DataTable GetDataHD()
-        {
-            return base.GetData("HOADON_SELECT_ALL", null);
-        }
         public DataTable GetDataByID(int MAHD)
         {
             SqlParameter[] para =
@@ -73,16 +69,6 @@ namespace SachApp.Service.Dao
                 new SqlParameter("MAHD", MAHD)
             };
             return base.ExecuteSQL("HOADON_DELETE", para);
-        }
-        public DataTable ThongKeHoaDon(int nv_id, string time1, string time2)
-        {
-            SqlParameter[] para =
-          {
-                new SqlParameter("TIME1",time1),
-                new SqlParameter("TIME2",time2),
-                new SqlParameter("MANV",nv_id),
-            };
-            return base.GetData("HOADON_SELECT_MANY", para);
         }
     }
 }

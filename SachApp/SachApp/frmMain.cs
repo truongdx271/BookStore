@@ -12,9 +12,9 @@ using SachApp.Service.Models;
 
 namespace SachApp
 {
-    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class x : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public frmMain()
+        public x()
         {
             InitializeComponent();
         }
@@ -77,7 +77,16 @@ namespace SachApp
 
         private void btnTacGia_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = CheckActiveForm(typeof(frmTacGia));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmTacGia fr = new frmTacGia();
+               //  fr.nvObj = nvObj;
+                fr.MdiParent = this;
+                fr.Show();
+            }
         }
 
         private void btnBanSach_ItemClick(object sender, ItemClickEventArgs e)
@@ -108,61 +117,38 @@ namespace SachApp
             Application.Exit();
         }
 
+        private void btnNXB_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckActiveForm(typeof(frmNhaXuatBan));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmNhaXuatBan fr = new frmNhaXuatBan();
+                fr.nvObj = nvObj;
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
+
         private void ribbon_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnNhanVien_ItemClick(object sender, ItemClickEventArgs e)
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = CheckActiveForm(typeof(frmNhanVien));
-            if (frm != null)
-                frm.Activate();
-            else
-            {
-                frmNhanVien fr = new frmNhanVien();
-                fr.MdiParent = this;
-                fr.Show();
-            }
+
         }
 
-        private void btnKhachHang_ItemClick(object sender, ItemClickEventArgs e)
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = CheckActiveForm(typeof(frmKhachHang));
-            if (frm != null)
-                frm.Activate();
-            else
-            {
-                frmKhachHang fr = new frmKhachHang();
-                fr.MdiParent = this;
-                fr.Show();
-            }
+
         }
 
-        private void btnHoaDon_ItemClick(object sender, ItemClickEventArgs e)
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = CheckActiveForm(typeof(frmThongKeHoaDon));
-            if (frm != null)
-                frm.Activate();
-            else
-            {
-                frmThongKeHoaDon fr = new frmThongKeHoaDon();
-                fr.MdiParent = this;
-                fr.Show();
-            }
-        }
 
-        private void btnPhieuNhap_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form frm = CheckActiveForm(typeof(frmThongKePhieuNhap));
-            if (frm != null)
-                frm.Activate();
-            else
-            {
-                frmThongKePhieuNhap fr = new frmThongKePhieuNhap();
-                fr.MdiParent = this;
-                fr.Show();
-            }
         }
     }
 }
